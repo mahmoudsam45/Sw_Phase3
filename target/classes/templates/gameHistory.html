@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"></meta>
+<title>test</title>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #D3D3D3;
+	font-family: cursive;
+	text-align: center;
+}
+
+.all {
+	background-color: #FFF;
+	max-width: 600px;
+	margin: 20px auto;
+	border-radius: 15px;
+	color: #041d27;
+}
+
+.all h1 {
+	text-align: center;
+	font-size: 45px;
+	font-weight: bold;
+	padding: 5px 0;
+	margin-bottom: 20px;
+}
+
+.all label {
+	font-size: 22px;
+	font-weight: bold;
+	display: inline-block;
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+
+.all .forms {
+	background-color: #041d27;
+	padding: 20px;
+	padding-top: 35px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.all .showGameInCourse input, .all .playGame input {
+	padding: 8px;
+	border-radius: 6px;
+	border: none;
+	width: 45%;
+	margin-bottom: 15px;
+	color: #FFF;
+	font-family: cursive;
+}
+
+.all .showGameInCourse .show, .all .playGame .play {
+	width: 20%;
+	margin-left: 6px;
+	background-color: #3498db;
+	font-weight: bold;
+	font-family: cursive;
+}
+
+.all .showCourse input, .all .information input, .all .addCourse input,
+	.all .addGame input {
+	border: none;
+	padding: 11px;
+	border-radius: 6px;
+	color: #FFF;
+	font-weight: bold;
+	font-family: cursive;
+}
+
+.all .information, .all .showCourse, .all .addGame, .all .addCourse {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+.all .information input {
+	background-color: #e67e22;
+	margin-left: 8px;
+}
+
+.all .showCourse input {
+	background-color: #2ecc71;
+}
+
+.all .addCourse input {
+	background-color: #1F7872;
+	margin-left: 8px;
+}
+
+.all .addGame input {
+	background-color: #1D646C;
+	margin-left: 8px;
+}
+
+table {
+	margin: auto;
+}
+
+.all .info span {
+	font-size: 18px;
+}
+
+.body {
+	background: #606c88;
+	background: -webkit-linear-gradient(to bottom, #3f4c6b, #606c88);
+	background: linear-gradient(to bottom, #3f4c6b, #606c88);
+}
+
+div {
+	text-align: center;
+	vertical-align: middle;
+	margin-right: auto;
+	margin-left: auto;
+	width: 800px;
+}
+</style>
+
+
+
+</head>
+<body style="background: #606c88;">
+
+	<div class="layout">
+		<header class="all" th:inline="text"
+			style="border-top: 4px solid #2196F3">
+			<h1>Game History</h1>
+
+
+			<table>
+				<tr th:each="hist: ${history}">
+					<td th:text="${hist}"></td>
+				</tr>
+			</table>
+
+		</header>
+	</div>
+</body>
+</html>

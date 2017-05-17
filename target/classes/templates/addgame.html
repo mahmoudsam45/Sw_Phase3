@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>Add Game</title>
+<link rel="stylesheet" href="shohagy.css"></link>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #55abb1;
+}
+
+.container {
+	text-align: center;
+	margin: 50px auto;
+}
+
+.question input[type="text"] {
+	padding: 15px 8px;
+	border: none;
+	border-radius: 3px;
+	width: 350px;
+	margin-bottom: 10px;
+}
+
+.question input[type="submit"] {
+	padding: 12px 10px;
+	border: none;
+	border-radius: 3px;
+	width: 180px;
+	margin-right: 3px;
+	color: #FFF;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #212a40;
+	font-family: cursive;
+	margin-top: 7px;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<form class="question" method="post">
+			<input type="text" name="Question" placeholder="Enter The Question"></input>
+			<br></br> <input type="text" name="Answer"
+				placeholder="Answer"></input> <br></br> <input type="text"
+				name="A" placeholder="First Solution"></input> <br></br> <input
+				type="text" name="B" placeholder="Second Solution"></input> <br></br>
+			<input type="text" name="C" placeholder="Third Solution"></input> <br></br>
+			<input type="text" name="D" placeholder="Fourth Solution"></input> <br></br>
+			<input type="submit" formaction="/AddQuestion" value="Send"></input>
+			  <input type="submit" formaction="/SaveAll" value="Save All"></input>
+			 
+		</form>
+	</div>
+
+</body>
+</html>

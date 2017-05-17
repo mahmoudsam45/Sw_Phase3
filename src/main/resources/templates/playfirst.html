@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games Application</title>
+</head>
+<body>
+<h1>Courses list</h1>
+<table>
+	<tr>
+		<th>Course Name</th>
+		<th>Game Name</th>
+	</tr>
+	<tr th:each="course : ${courses}">
+		<td th:text="${course.coursename}"></td>
+		<td th:text="${course.gamename}"></td>
+	</tr>
+	</table>
+	<form action="/playgame">
+		Game Name<input type="text" name="GName"></input><br></br>
+		Course Name <input type="text" name="CName"></input>
+		 <input type="submit"></input>
+	</form>
+<form action="/WriteComment" method="post">
+<input type="text" name="GName" placeholder="Game Name"></input><br></br>
+<input type="text" name="CName" placeholder="Course Name"></input><br></br>
+<textarea rows="10" cols="50" name="Comment" placeholder="write your Comment here:)"></textarea><br></br>
+<input type="submit" value="Add Comment" ></input>
+</form>
+<form>
+	<input type="text" placeholder="write your name here .." name="UName" />
+			<input type="text" placeholder="write the game name you want to copy here .." name="GName" />
+			<input type="text" placeholder="write the course name for this game here .." name="CName" />
+			
+			<input type="submit" formaction="/" value=" Copy Game" />
+		</form>
+</body>
+</html>

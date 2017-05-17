@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>Play Game</title>
+ 		<style>
+		[type="radio"]:not(:checked), [type="radio"]:checked {
+    position: relative !important;
+    opacity: 1 !important;
+	left: 0 !important;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 8.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  transition: all 0.15s ease-out 0s;
+  background: #212a40 ;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+  border-radius: 50%;
+}
+.option-input:hover {
+  background: #212a40;
+}
+.option-input:checked {
+  background: #212a40 ;
+}
+.option-input:checked::before {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 20.66667px;
+  text-align: center;
+  line-height: 25px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #212a40 ;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+		* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #55abb1;
+}
+
+.container {
+    text-align: center;
+    margin: 50px auto;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+        font-family: cursive;
+}
+
+.page input[type="text"] {
+    padding: 15px 8px;
+    border: none;
+    border-radius: 3px;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.page input[type="submit"] {
+    padding: 12px 10px;
+    border: none;
+    border-radius: 3px;
+    width: 368px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #212a40;
+    font-family: cursive;
+    margin-top: 7px;
+}
+.dis{
+ color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+        font-family: cursive;
+    
+}
+
+</style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <form class="page" action="/question">
+                <div class="col s12 m6">
+				<p th:text="${Game.Question}"></p>
+		<input type="radio" name="a" class='option-input' value="A" th:text="${Game.a}"> </input> <br></br><input
+			type="radio" name="a" class='option-input' value="B" th:text="${Game.b}"> </input> <br></br><input
+			type="radio" name="a" class='option-input' value="C" th:text="${Game.c}"> </input><br></br> <input
+			type="radio" name="a" class='option-input' value="D" th:text="${Game.d}"> </input><br></br>  
+			 
+								
+                <input type="submit" value="Submit"></input></div>
+            </form>
+        </div>
+        
+    </body>
+</html>

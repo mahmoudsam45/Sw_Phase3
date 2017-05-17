@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>Teacher</title>
+        <style>* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+background: #55abb1;
+}
+
+.course {
+    padding: 5px;
+    margin: 20px 10px;
+}
+table th {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.forms {
+    margin-left: 17px;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 10px 5px;
+    margin-left: 16px;
+    width: 230px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+td {
+	color: #FFF;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 10px 35px;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #2196F3;
+}
+
+
+textarea {
+    border: none;
+    padding: 10px 5px;
+    width: 400px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.comments {
+    margin-left: 17px;
+}
+
+.comments input {
+    width: 410px;
+    border: none;
+    padding: 10px 35px;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #2196F3;
+}</style>
+    </head>
+    <body  style="background: #606c88;">
+        <div class="container">
+            <div class="course">
+                <table>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Game Name</th>
+                    </tr>
+                    <tr th:each="course : ${courses}">
+                        <td th:text="${course.coursename}"></td>
+                        <td th:text="${course.gamename}"></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <form>
+                <input type="text" name="GName" placeholder="Game Name"/> <br></br>
+                <input type="text" name="CName" placeholder="Course Name"/>
+           
+            
+            <div class="forms">
+        		<input type="submit" formaction="/playgame" name="Play" value="Play" class="play"/>
+            
+		  <input type="submit" value="user info" formaction="/userinfo" class="user"/>
+            
+		  <input type="submit" formaction="/courses" name="Show Courses"
+			value="Show Courses" class="show"/>
+			<br></br>
+            
+            <input type="submit" value="Notification"
+			formaction="/ListNotification" class="notifay"/>
+            
+             
+       <input
+			type="submit" formaction="/showGames" value="Show Games" class="show"/>            
+ 	   	  <input type="submit"  value="Track Game"  formaction ="/gameHistory" class="history"/>
+ 	   	 
+            </div>
+              
+            <div class="comments">
+                <textarea rows="10" cols="20" name="Comment"
+                placeholder="write your Comment here:)"></textarea>
+                <br></br>
+             <input type="submit" value="Add Comment" formaction="/WriteComment"/></div>
+            </form>
+        </div>
+        
+    </body>
+</html>

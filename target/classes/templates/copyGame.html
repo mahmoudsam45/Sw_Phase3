@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title> Copy Game </title>
+
+<style>
+	
+	h1{
+		text-align: center;
+	}
+	
+	.container{
+		width: 700px;
+		margin: auto;
+	}
+	
+	form input{
+		width: 100%;
+		display: block;
+		margin-bottom: 15px;
+		border-radius: 7px;
+		padding: 10px;
+	}
+	
+	form button{
+		border-radius: 7px;
+		margin-left: 42%;
+		padding: 10px;
+	}	
+
+	form button:hover{
+		cursor: pointer;
+	}
+</style>
+
+</head>
+<body>
+
+	<h1> Copy Game</h1>
+	<div class="container">
+		<form>
+			<input type="text" placeholder="write your name here .." name="UName" />
+			<input type="text" placeholder="write the game name you want to copy here .." name="GName" />
+			<input type="text" placeholder="write the course name for this game here .." name="CName" />
+			
+			<input type="submit" formaction="/" value=" Copy Game" />
+		</form>
+	</div>
+</body>
+</html>
